@@ -1,6 +1,6 @@
 # angdist
 
-[![DOI](https://zenodo.org/badge/DOI/.svg)](https://doi.org/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4104053.svg)](https://doi.org/10.5281/zenodo.4104053)
 
 Plot the 2D histogram of Euler angles covered by a set of cryo-EM particles.
 
