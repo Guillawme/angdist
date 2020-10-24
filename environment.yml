@@ -2,12 +2,6 @@ name: dev-angdist
 channels:
   - defaults
   - conda-forge
-  - bioconda
-  - pytorch
-  - hydroid
-  - ambermd
-  - schrodinger
-  - tbepler
 dependencies:
   - blas=1.0=mkl
   - bleach=3.2.1=py_0
@@ -80,4 +74,3 @@ dependencies:
   - zstd=1.4.5=h41d2c2f_0
   - pip:
     - starfile==0.3.1
-prefix: /Users/guillaume/miniconda3/envs/dev-angdist
