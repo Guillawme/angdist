@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 import starfile as star
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
@@ -34,14 +31,14 @@ def build_histogram(angles, title, colormap, gridsize):
 
 # Command-line tool made from the buidling blocks
 
-@click.command(context_settings = dict(help_option_names = ['-h', '--help']))
-@click.argument('starfile', metavar = '<run_data.star>')
-@click.option('-t', '--title', 'title', default = '', type = str, help = 'Title of the histogram (default: no title).')
-@click.option('-c', '--colormap', 'colormap', default = 'viridis', type = str, help = 'A color map supported by matplotlib (default: "viridis").')
-@click.option('-g', '--gridsize', 'gridsize', default = 50, type = int, help = 'Number of hexagonal bins along the x axis (default: 50).')
-@click.option('-o', '--output', 'output_file', default = '', type = str, help = 'File name to save the histogram (optional: with no file name, simply display the histogram on screen without saving it; recommended file formats: .png, .pdf, .svg or any format supported by matplotlib).')
+@click.command(context_settings = dict(help_option_names=['-h', '--help']))
+@click.argument('starfile', metavar='<run_data.star>')
+@click.option('-t', '--title', 'title', default='', type=str, help='Title of the histogram (default: no title).')
+@click.option('-c', '--colormap', 'colormap', default='viridis', type=str, help='A color map supported by matplotlib (default: "viridis").')
+@click.option('-g', '--gridsize', 'gridsize', default=50, type=int, help='Number of hexagonal bins along the x axis (default: 50).')
+@click.option('-o', '--output', 'output_file', default='', type=str, help='File name to save the histogram (optional: with no file name, simply display the histogram on screen without saving it; recommended file formats: .png, .pdf, .svg or any format supported by matplotlib).')
 def cli(starfile, title, colormap, gridsize, output_file):
-    """Plots a 2D histogram of Euler angles distribution from a run_data.star file produced by RELION."""
+    """Plot a 2D histogram of Euler angles distribution from a run_data.star file produced by RELION."""
     angles = load_angles(starfile)
     histogram = build_histogram(angles, title, colormap, gridsize)
     if output_file:
@@ -50,6 +47,3 @@ def cli(starfile, title, colormap, gridsize, output_file):
         plt.savefig(output_file)
     else:
         plt.show()
-
-if __name__ == '__main__':
-    cli()
