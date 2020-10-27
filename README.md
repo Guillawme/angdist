@@ -11,6 +11,9 @@ important to assess the quality of a dataset. This command-line tool generates a
 2D histogram of particle orientations from a `run_*_data.star` file from a
 RELION Class3D or Refine3D job.
 
+This tool was tested with star files produced by RELION-3.1.0. Earlier versions
+of RELION are not supported.
+
 ## FAQ
 
 **Q:** Doesn't RELION already do this?
@@ -53,7 +56,7 @@ $ pip install angdist
 $ angdist --help
 Usage: angdist [OPTIONS] <run_data.star>
 
-  Plots a 2D histogram of Euler angles distribution from a run_data.star
+  Plot a 2D histogram of Euler angles distribution from a run_data.star
   file produced by RELION.
 
 Options:
@@ -70,6 +73,4 @@ Options:
                           .pdf, .svg or any format supported by matplotlib).
 
   -h, --help              Show this message and exit.
-
 ```
-
