@@ -8,7 +8,7 @@ with open(path.join(here, 'README.md'), encoding = 'utf-8') as f:
 
 setup(
     name = 'angdist',
-    version = '1.0',
+    version = '1.1',
 
     description = 'Plot the 2D histogram of Euler angles covered by a set of cryo-EM particles.',
     long_description = readme,
