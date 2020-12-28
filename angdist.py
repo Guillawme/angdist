@@ -8,7 +8,7 @@ import click
 def load_angles(starfile):
     """Load rlnAngleRot and rlnAngleTilt from a run_data.star file."""
     star_data = star.open(starfile)
-    angles = star_data[1][['rlnAngleRot', 'rlnAngleTilt']]
+    angles = star_data['particles'][['rlnAngleRot', 'rlnAngleTilt']]
     return angles
 
 def build_histogram(angles, title, colormap, gridsize):
