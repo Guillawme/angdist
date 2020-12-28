@@ -27,5 +27,5 @@ clean:
 create-env:
 	conda env create -f environment.yml
 
-update-env:
+save-env:
 	conda env export --name dev-$(PROJECT) > environment.yml
