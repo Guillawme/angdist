@@ -31,7 +31,7 @@ def build_histogram(angles, title, colormap, gridsize):
 
 # Command-line tool made from the buidling blocks
 
-@click.command(context_settings = dict(help_option_names=['-h', '--help']))
+@click.command(context_settings=dict(help_option_names=['-h', '--help']))
 @click.argument('starfile', metavar='<run_data.star>')
 @click.option('-t', '--title', 'title', default='', type=str, help='Title of the histogram (default: no title).')
 @click.option('-c', '--colormap', 'colormap', default='viridis', type=str, help='A color map supported by matplotlib (default: "viridis").')
