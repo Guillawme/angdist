@@ -8,9 +8,9 @@ with open(path.join(here, 'README.md'), encoding = 'utf-8') as f:
 
 setup(
     name = 'angdist',
-    version = '1.1',
+    version = '1.2',
 
-    description = 'Plot the 2D histogram of Euler angles covered by a set of cryo-EM particles.',
+    description = 'Plot the 2D histogram of Euler angles covered by a set of cryo-EM particles',
     long_description = readme,
     long_description_content_type = 'text/markdown',
     url = 'https://github.com/Guillawme/angdist',
@@ -34,11 +34,11 @@ setup(
 
     py_modules = ["angdist"],
 
-    python_requires = '>=3.8.5',
+    python_requires = '>=3.9.1',
     install_requires = [
         'click>=7.1.2',
-        'matplotlib>=3.3.1',
-        'starfile>=0.3.1'
+        'matplotlib>=3.3.2',
+        'starfile>=0.4.4'
     ],
 
     entry_points = {
