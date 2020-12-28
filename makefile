@@ -8,7 +8,7 @@ FILES = \
 	setup.py \
 	$(PROJECT).py
 
-.PHONY: all check upload clean create-env update-env
+.PHONY: all check upload clean create-env save-env
 
 all: build check upload
 
