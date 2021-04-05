@@ -46,6 +46,19 @@ I would not have been able to put this tool together without the
 
 ## Installation
 
+I recommend to install this tool in a dedicated conda environment. You can
+create one like so (replace `ENV_NAME` with the name you want to give to this
+environment):
+
+```
+$ conda deactivate
+$ conda create --name ENV_NAME python=3.9
+$ conda activate ENV_NAME
+```
+
+Once the conda environment is active, you can install the tool with the
+following command:
+ 
 ```
 $ pip install angdist
 ```
