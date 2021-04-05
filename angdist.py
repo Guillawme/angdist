@@ -12,7 +12,7 @@ def load_angles(starfile):
     return angles
 
 def build_histogram(angles, title, colormap, gridsize):
-    """Builds a 2D histogram of number of particles per Euler angle pair."""
+    """Build a 2D histogram of number of particles per Euler angle pair."""
     fig, ax = plt.subplots()
     hb = ax.hexbin(angles.rlnAngleRot, angles.rlnAngleTilt, bins='log', cmap=colormap, gridsize=gridsize)
     ax.set(xlim=(-180, 180), ylim=(0, 180))
