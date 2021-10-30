@@ -7,7 +7,7 @@ import click
 
 def load_angles(starfile):
     """Load rlnAngleRot and rlnAngleTilt from a run_data.star file."""
-    star_data = star.open(starfile)
+    star_data = star.read(starfile)
     angles = star_data['particles'][['rlnAngleRot', 'rlnAngleTilt']]
     return angles
 
